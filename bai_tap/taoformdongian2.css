@@ -1,0 +1,16 @@
+.container{
+    background-color: gold;
+}
+.color{
+    background-color: aquamarine;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+.index{
+    height: 50px;
+    margin-left: 23px;
+}
