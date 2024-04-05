@@ -1,0 +1,22 @@
+.container{
+    border: 20px solid #08f1f1;
+    color: coral;
+}
+h1{
+    text-align: center;
+    background-color: red;
+    color: white;
+    width: 95%;
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.index{
+    margin-left: 66px;
+    color: coral;
+}
+.color{
+    margin-left: 24px;
+    color: blue;
+}
