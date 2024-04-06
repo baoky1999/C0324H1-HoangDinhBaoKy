@@ -1,0 +1,25 @@
+.contraction{
+    width: 2700px;
+    color: cornflowerblue;
+}
+.tieude{
+    color: blue;
+    text-align: center;
+}
+.table2{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    td,th{
+        border: 2px solid black;
+        border-collapse: collapse;
+        height: 30px;
+    }
+}
+.colortieude{
+    background-color: gold;
+}
+.colortieude2{
+    background-color: coral;
+}
+
