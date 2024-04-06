@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+    color: blue;
+}
+.tieude{
+    text-align: center;
+}
+.origan{
+    background-color: #efd625;
+    color: white;
+}
+.lich{
+    text-align: center;
+    width: 100%;
+    td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        height: 50px;
+    }
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.chunhat{
+    background-color: red;
+    width: 234px;
+}
+.thubay{
+    width: 210px;
+    background-color: blue;
+}
+.kieuchu{
+    font-family: "Arial Black";
+}
