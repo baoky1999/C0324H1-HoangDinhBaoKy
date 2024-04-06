@@ -1,0 +1,25 @@
+.index{
+    margin-left: 13px;
+    word-spacing: 133px;
+
+}
+table,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 60px;
+    width: 1500px;
+}
+.center{
+    text-align: center;
+}
+.right{
+    width: 6000px;
+    text-align: left;
+}
+.textarea{
+    height: 100px;
+    width: 100%;
+}
+.submit {
+    height: 30px;
+}
