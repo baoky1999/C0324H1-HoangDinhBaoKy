@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đồi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" name="nb" id="nhaptien">
+        </td>
+        <td>
+            <select id="select1">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+        </td>
+        <td>
+            <select id="select2">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+        </td>
+        <td>
+            <button type="button" onclick="chuyenDoi()">Convert</button>
+        </td>
+    </tr>
+</table>
+<br>
+<p id="result"></p>
+<script>
+    function chuyenDoi(){
+        let giatrivao= document.getElementById('nhaptien').value;
+        let select1 = document.getElementById('select1').value;
+        let select2 = document.getElementById('select2').value;
+        if (select1 == select2){
+            document.getElementById("result").innerHTML="Result: "+ giatrivao + select2;
+        }
+        if (select1 == "VND" && select2 == "USD"){
+            document.getElementById("result").innerHTML="Result: "+ giatrivao/23000 + select2;
+        }
+        if (select1 == "USD" && select2 == "VND"){
+            document.getElementById("result").innerHTML="Result: "+ giatrivao*23000 + select2;
+        }
+    }
+</script>
+</body>
+</html>
