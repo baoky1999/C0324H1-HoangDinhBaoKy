@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <input type="number" name="nb" id="sotruoc">
+        </td>
+        <td>
+            <input type="number" name="nb" id="sosau">
+        </td>
+        <td>
+            <button type="button" onclick="cong()">Cộng</button>
+        </td>
+        <td>
+            <button type="button" onclick="tru()">Trừ</button>
+        </td>
+    </tr>
+</table>
+<br>
+<h2><strong>Result : </strong></h2>
+<p id="area"></p>
+<script>
+    function cong(){
+        let sotruoc = document.getElementById("sotruoc").value;
+        let sosau = document.getElementById("sosau").value;
+        let area = Number(sotruoc) + Number(sosau);
+        document.getElementById("area").innerHTML = area;
+    }
+    function tru(){
+        let sotruoc = document.getElementById("sotruoc").value;
+        let sosau = document.getElementById("sosau").value;
+        let area = Number(sotruoc) - Number(sosau);
+        document.getElementById("area").innerHTML = area;
+    }
+
+</script>
+</body>
+</html>
