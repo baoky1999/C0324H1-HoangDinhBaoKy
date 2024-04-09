@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số chiều cao và cân nặng BMI</title>
+</head>
+<body>
+<h1 style="text-color: red">Tính chỉ số cân nặng</h1>
+<p><strong>Nhập cân nặng: (kg) </strong><input id="kg" type="text" name="kg"></p>
+<p><strong>Nhập chiều cao: (m) </strong><input id="m" type="text" name="m"></p>
+<input type="button" value="Kiểm tra" onclick="tinhtoan()"/>
+<p id="result"></p>
+<script>
+    function tinhtoan (){
+        let cannang = document.getElementById("kg").value;
+        let chieucao =document.getElementById("m").value;
+        let arge = cannang / (chieucao * chieucao);
+        if (arge <= 15){
+            document.getElementById('result').innerHTML= "Chỉ số BMI của bạn là: " + arge +'<strong>.Bạn gầy cấp 2. Ăn uống nhiều vào nhé</strong> <img src="https://vcdn-suckhoe.vnecdn.net/2017/03/13/nguoigay-1-7985-1489423086.jpg" width="100" height="100">';
+        }else if (arge <= 18.5){
+            document.getElementById('result').innerHTML= "Chỉ số BMI của bạn là: " + arge + '<strong>.Bạn gầy cấp 1. Ăn uống đủ chất bạn nhé</strong> <img src="https://png.pngtree.com/background/20230602/original/pngtree-skinny-young-man-making-muscle-against-black-background-photo-picture-image_2847720.jpg" width="100" height="100"> ';
+        }else if (arge <= 25){
+            document.getElementById('result').innerHTML= "Chỉ số BMI của bạn là: " + arge + '<strong>. Bạn bình thường</strong> <img src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/474089UNT/anh-dep-gym-nghe-thuat_113407029.jpg" width="100" height="100">';
+        }else if (arge <= 30){
+            document.getElementById('result').innerHTML= "Chỉ số BMI của bạn là: " + arge + '<strong>. Bạn mập cấp 1. Ăn uống hợp lí bạn nhé</strong> <img src="https://anh.24h.com.vn/upload/3-2015/images/2015-08-16/1439711722-1439455485-tuyenmap.jpg" width="100" height="100">';
+        }else {
+            document.getElementById('result').innerHTML= "Chỉ số BMI của bạn là: " + arge + '<strong>. Bạn béo phì. Nên kết hợp ăn uống khoa học và tập luyện thể dục</strong> <img src="https://medlatec.vn/ImagePath/images/20201202/20201202_chung-ta-nen-xay-dung-lich-tap-gym-cho-nguoi-beo-de-luyen-tap-hieu-qua-nhat.jpg" width="100" height="100">';
+        }
+
+    }
+</script>
+</body>
+</html>
