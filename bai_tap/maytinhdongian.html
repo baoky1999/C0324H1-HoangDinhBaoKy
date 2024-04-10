@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+<h1 style="color: darkgreen">Calculator</h1>
+<br>
+<input type="text" name="inputso" size="38px" id="nhapso"/>
+<br>
+<table>
+    <tr>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('1')">1</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('2')">2</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('3')">3</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('4')">4</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('5')">5</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('6')">6</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('7')">7</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('8')">8</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('9')">9</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('*')">*</button></td>
+    </tr>
+    <tr>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="xoa()">AC</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('0')">0</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="ketqua()">=</button></td>
+        <td><button class="button" TYPE="button" name="1" value="1" onclick="nhap('/')">/</button></td>
+    </tr>
+</table>
+<script>
+    function nhap(value){
+       document.getElementById('nhapso').value +=  value;
+
+    }
+    function xoa(){
+        document.getElementById('nhapso').value = '';
+    }
+    function ketqua(){
+        let nhapso = document.getElementById('nhapso').value;
+        let ketqua = eval(nhapso);
+        document.getElementById('nhapso').value = ketqua;
+    }
+</script>
+
+
+</body>
+</html>

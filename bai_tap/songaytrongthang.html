@@ -16,7 +16,12 @@
                 document.getElementById('result').innerHTML = "Tháng " + month + " có 31 ngày";
                 break;
             case 2:
-                document.getElementById('result').innerHTML = "Tháng " + month + " có 28 hoặc 29 ngày";
+                let month2 = prompt("Nhập năm");
+                if (month2 % 4 && month2  % 400  month !== 100){
+                    document.getElementById('result').innerHTML = "Tháng " + month + " có 29 ngày";
+                }else{
+                    document.getElementById('result').innerHTML = "Tháng " + month + " có 28 ngày";
+                }
                 break;
             case 3:
                 document.getElementById('result').innerHTML = "Tháng" + month + " có 31 ngày";

@@ -1,0 +1,15 @@
+.buttons {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.button {
+    flex-grow: 1;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 50px;
+    color: blue;
+
+}
