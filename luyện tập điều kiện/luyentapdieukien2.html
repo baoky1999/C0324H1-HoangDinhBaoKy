@@ -43,6 +43,218 @@
 
     }
 </script>-->
+<!--<br>
+<h1>Bài 4</h1>
+<h2>Diện tích hình chữ nhật:</h2>
+<input type="text" placeholder="Nhập giá trị chiều rộng(a)" id="giatria"/>
+<br>
+<br>
+<input type="text" placeholder="Nhập giá trị chiều dài (b)" id="giatrib"/>
+<br>
+<br>
+<button type="button" value="kiemtra" onclick="tinhtoan()">Tính toán</button>
+<h1 id="result"></h1>
+<script>
+    function tinhtoan(){
+        let a = document.getElementById('giatria').value;
+        let b = document.getElementById('giatrib').value;
+        let area = a * b;
+        document.getElementById('result').innerHTML = "Diện tích hình chữ nhật là: " + area;
+    }
+</script>-->
+<!--<br>
+<h1>Bài 5</h1>
+<h2>Diện tích tam giác vuông</h2>
+<input type="text" placeholder="Nhập giá trị(a)" id="giatria"/>
+<br>
+<br>
+<input type="text" placeholder="Nhập giá trị(b)" id="giatrib"/>
+<br>
+<br>
+<button type="button" value="kiemtra" onclick="tinhdientich()">Tính toán</button>
+<h1 id="result"></h1>
+<script>
+    function tinhdientich() {
+        let a = +document.getElementById('giatria').value;
+        let b = +document.getElementById('giatrib').value;
+        let area = (a * b) / 2;
+        document.getElementById('result').innerHTML = "Diện tích hình tam giác vuông là: " + area;
+    }
+</script>-->
+<!--<br>
+<br>
+<h1>Bài 6</h1>
+<h2>Gải phương trình bậc 1: ax + b = 10 tìm x</h2>
+<input type="text" placeholder="Giá trị a" id="giatria"/>
+<br>
+<br>
+<input type="text" placeholder="Giá trị b" id="giatrib"/>
+<br>
+<br>
+<button type="button" onclick="dapan()">Tìm x</button>
+<br>
+<br>
+<h1 id="result" ></h1>
+<script>
+    function dapan() {
+        let a = +document.getElementById('giatria').value;
+        let b = +document.getElementById('giatrib').value;
+        let x = (10 - b) / a
+        document.getElementById('result').innerHTML = "Giá trị x cần tìm là: " + x;
+    }
+</script>-->
+<!--<br>
+<br>
+<h1>Bài 7</h1>
+<h2>Giair phương trình bậc 2: ax^2 + bx + c = 0 và tìm giá trị của x</h2>
+<input type="text" placeholder="Nhập a" id="soa"/>
+<br>
+<br>
+<input type="text" placeholder="Nhập a" id="sob"/>
+<br>
+<br>
+<input type="text" placeholder="Nhập c" id="soc"/>
+<br>
+<br>
+<button type="button" onclick="timx()">Tìm x</button>
+<br>
+<br>
+<h2 id="result"></h2>
+<script>
+    function timx() {
+        let a = document.getElementById('soa').value;
+        let b = document.getElementById('sob').value;
+        let c = document.getElementById('soc').value;
+        let x = b^2 - 4*a*c;
+        document.getElementById('result').innerHTML ="Giá trị x cần tìm là: " + x;
+    }
+</script>-->
+<!--<br>
+<br>
+<h1>Bài 8</h1>
+<h2>Nhập số cần kiểm tra vào ô dưới:</h2>
+<input type="text" name="number" id="number" /> <button type="button" onclick="check()">Kiểm tra</button>
+<br>
+<br>
+<h1 id="result"></h1>
+<script>
+    function check() {
+        let number = +document.getElementById('number').value;
+        if (0 < number && number < 120) {
+            document.getElementById('result').innerHTML = number + " Số này là tuổi của người";
+        }else {
+            document.getElementById('result').innerHTML = number + " Số này KHÔNG phải là tuổi của người";
+        }
+    }
+</script>-->
+<!--<br>
+<h1>Bài 9</h1>
+<p>Giá trị a:</p>
+<input type="number" id="soa"/><br>
+<p>Giá trị b:</p>
+<input type="number" id="sob"/><br>
+<p>Giá trị c:</p>
+<input type="number" id="soc"/><br>
+<br>
+<button type="button" onclick="check()">Kiểm tra</button>
+<h1 id="result"></h1>
+<script>
+    function check() {
+        let a = +document.getElementById('soa').value;
+        let b = +document.getElementById('sob').value;
+        let c = +document.getElementById('soc').value;
+        if (a < 0 && b < 0 && c < 0) {
+            document.getElementById('result').innerHTML = "Số a, b, c KHÔNG PHẢI là 3 cạnh của một tam giác";
+        }
+        if (a + b > c && b + c > a && a + c > b) {
+            document.getElementById('result').innerHTML = "Số a, b, c Là 3 cạnh của một tam giác";
+        }else {
+            document.getElementById('result').innerHTML = "Số a, b, c KHÔNG PHẢI là 3 cạnh của một tam giác";
+        }
+    }
+</script>-->
+<!--<br>
+<h1>Bài 10</h1>
+<h2>Tính tiền điện hàng tháng</h2>
+<h3>Nhập số tiền điện tiêu thụ (kwh)</h3>
+<input type="text" name="sodien" placeholder="Kwh" id="chudien"/>
+<br>
+<br>
+<button type="button" onclick="tinh()">Tính tiền điện</button>
+<br>
+<h1 id="result"></h1>
+<script>
+    function tinh() {
+        let dien = +document.getElementById('chudien').value;
+        if (dien > 100) {
+            document.getElementById('result').innerHTML = "Số tiền cần thanh toán là: " + dien * 2000 + "VND";
+        }else if (dien > 50) {
+            document.getElementById('result').innerHTML = "Số tiền cần thanh toán là: " + dien * 1700 + "VND";
+        }else if (dien > 20) {
+            document.getElementById('result').innerHTML = "Số tiền cần thanh toán là: " + dien * 1500 + "VND";
+        }else {
+            document.getElementById('result').innerHTML = "Số tiền cần thanh toán là: " + dien * 1100 + "VND";
+        }
+
+    }
+</script>-->
+<!--<br>
+<h1>Bài 11</h1>
+<h2>Tính thuế thu nhập cá nhân</h2>
+<h3>Nhập lương của bạn vào ô bên dưới</h3>
+<input typr="text" name="VND" placeholder="VND" id="money"/>
+<br>
+<br>
+<button type="button" onclick="check()">Kiểm tra thuế</button>
+<br>
+<h1 id="result"></h1>
+<script>
+    function check() {
+        let salary = +document.getElementById('money').value;
+        if (salary < 5000000) {
+            document.getElementById('result').innerHTML = "Số tiền cần đóng thuế là: " + salary * 0.05;
+        } else if (salary < 10000000) {
+            document.getElementById('result').innerHTML = "Số tiền cần đóng thuế là: " + salary * 0.1;
+        } else if (salary < 18000000) {
+            document.getElementById('result').innerHTML = "Số tiền cần đóng thuế là: " + salary * 0.15;
+        } else if (salary < 32000000) {
+            document.getElementById('result').innerHTML = "Số tiền cần đóng thuế là: " + salary * 0.2;
+        }
+    }
+</script>-->
+<br>
+<h1>Bài 12</h1>
+<h2>Tính lãi suất ngân hàng</h2>
+<h3>Số tiền ban đầu</h3>
+<input type="text" id="money"/>
+<h3>Số tháng cho vay</h3>
+<input type="text" id="month"/>
+<h3>Lãi suất</h3>
+<input type="text" id="lai1"/>
+<input type="text" id="lai2"/>
+<br>
+<br>
+<button type="button" onclick="check()">Kiểm tra</button>
+<br>
+<h1 id="result"></h1>
+<script>
+    function check() {
+        let money = +document.getElementById('money').value;
+        let month = +document.getElementById('month').value;
+        let lai1 = +document.getElementById('lai1').value;
+        let lai2 = +document.getElementById('lai2').value;
+
+        if (money > 300000000) {
+            document.getElementById('result').innerHTML = "Số tiền cẩn trả lãi hàng tháng là: " + money * lai1 / month + "VND";
+        }else if (money > 100000000) {
+            document.getElementById('result').innerHTML = "Số tiền cẩn trả lãi hàng tháng là: " + money * lai2 / month + "VND";
+        }else {
+            document.getElementById('result').innerHTML = "không tính lãi suất"
+        }
+    }
+</script>
+
+
 
 </body>
 </html>
