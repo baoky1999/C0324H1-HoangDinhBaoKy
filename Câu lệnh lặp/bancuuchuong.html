@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+</head>
+<body>
+<h1>Bảng cửu chương</h1>
+<script>
+    let nice;
+    nice = "<table border = '1' width = '500' cellspacing = '0' cellpadding = '5'>";
+    for (i = 1; i <= 10; i++) {
+            nice = nice + "<tr>";
+        for (j = 2; j <= 9; j++) {
+            nice = nice + "<td>" + j + "x";
+            nice = nice + i + "=";
+            nice = nice + i * j + "</td>";
+        }
+        nice = nice + "</tr>";
+    }
+    nice = nice + "</table>";
+    document.write(nice);
+
+
+
+</script>
+</body>
+</html>
