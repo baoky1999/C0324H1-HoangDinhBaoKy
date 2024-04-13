@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc lặp</title>
+</head>
+<body>
+<script>
+// Bài 1
+//     let i = 0;
+//     while (i < 100) {
+//         document.write(i + "<br>");
+//         if (i == 99) {
+//             alert("Đã hoàn thành");
+//         }
+//     i++;
+//     }
+    // let i = 0;
+    // for (i = 0; i < 100; i++) {
+    //     document.write(i + "<br>");
+    //     if (i == 99) {
+    //         alert("Đã hoàn thành");
+    //     }
+    // }
+
+//Bài 2
+
+// for (i = 0; i < 1000; i++) {
+//     let num = prompt("Nhập nhiệt độ cần kiểm tra");
+//     if (num > 100) {
+//         alert('Giảm nhiệt độ:');
+//     }
+//     if (num < 20) {
+//         alert('Tăng nhiệt độ');
+//     }
+// }
+
+//Bài 3
+// let num1 = 0;
+// let num2 = 1 ;
+// let count;
+// let i = 1;
+// while (i <= 20) {
+//     document.write(count = num1 + num2);
+//     num1 = num2;
+//     num2 = count;
+//     i++;
+//     document.write("<br>");
+// }
+
+//Bài 4
+
+// let num1 = 0;
+// let num2 = 1 ;
+// let count;
+// let i = 1;
+// while (i <= 20) {
+//     document.write(count = num1 + num2);
+//     if ( count % 5 == 0) {
+//         alert(count);
+//         break;
+//     }
+//     num1 = num2;
+//     num2 = count;
+//     i++;
+//     document.write("<br>");
+// }
+
+//Bài 5
+
+// let num1 = 0;
+// let num2 = 1 ;
+// let count;
+// let count2 = 0;
+// let i = 1;
+// while (i <= 20) {
+//     count = num1 + num2;
+//     num1 = num2;
+//     num2 = count;
+//     i++;
+//     count2 = count2 + count;
+// }
+// document.write(count2);
+
+//Bài 6
+
+// let number = 30;
+// let count = 0;
+// function check(number) {
+//     let countN = 0;
+//     for (i = 1;i <= 1000; i++) {
+//         if (countN < number) {
+//             if (i % 7 == 0) {
+//                 count += i;
+//                 countN += 1;
+//             }
+//         }else {
+//             document.write(count);
+//             break;
+//         }
+//     }
+// }
+// check(number);
+
+//Bài 7
+
+// for (i = 1; i <= 100; i++) {
+//     if ( i % 3 == 0 && i % 5 == 0) {
+//         document.write('FizzBuzz' + '<br>');
+//     }else if (i % 3 == 0) {
+//         document.write('Fizz' + '<br>');
+//     }else if (i % 5 == 0 ) {
+//         document.write('Buzz' + '<br>')
+//     }else {
+//         document.write(i + '<br>');
+//     }
+// }
+
+</script>
+
+<!-- Bài 8 -->
+
+<button type="button" onclick="check()" >Kiểm tra</button>
+<script>
+    function check() {
+        let number = prompt("Nhập khoảng lớn nhất bạn muốn đoán:");
+        let numberNew = Math.floor(Math.random() * number);
+        let soDoan = prompt("Nhập số bạn đoán");
+        let count = 0;
+        while (soDoan !== numberNew) {
+            count++;
+            if (count == 4) {
+                alert('Kết thúc, bạn đã hết lượt đoán');
+            }else if (soDoan < numberNew) {
+                alert('Số bạn đoán bé hơn!');
+            }else if (soDoan > numberNew) {
+                alert('Số bạn đoán lớn hơn!');
+            }else if (soDoan == numberNew) {
+                alert('Chúc mừng bạn đã đóan đúng ^_^');
+                break;
+            }
+        soDoan = prompt("Nhập số bạn đoán vào đây");
+        }
+    }
+</script>
+</body>
+</html>
