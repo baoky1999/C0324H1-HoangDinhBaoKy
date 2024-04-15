@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc lặp 3</title>
+</head>
+<body>
+
+<!--Bài 1-->
+<!--<script>-->
+<!--    let i = 1;-->
+<!--    let result = 50;-->
+<!--    let count = 0;-->
+<!--    for (i = 0; i < 2023; i++) {-->
+<!--        result += i;-->
+<!--        console.log(result);-->
+<!--        count += 1;-->
+<!--    }-->
+<!--    if (count === 2023) {-->
+<!--        document.write(result);-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 2-->
+
+<!--<script>-->
+<!--    let num = null;-->
+<!--  do {-->
+<!--      num = prompt("Nhập số nằm trong khoảng 0 < số nhập < 100");-->
+<!--  }while (num < 0 || num > 100)-->
+<!--      alert('Số bạn vừa nhập thỏa điều kiện!');-->
+
+<!--</script>-->
+
+<!--Bài 3-->
+
+<!--<script>-->
+<!--    let ageFather = parseInt(prompt('Nhập số tuổi của bố:'));-->
+<!--    let ageChild = parseInt(prompt('Nhập số tuổi của con:'));-->
+<!--    let count = 0;-->
+<!--    if ((ageFather - ageChild) >= 25) {-->
+<!--         while (ageFather < (ageChild *2) || ageFather > (ageChild * 2)) {-->
+<!--             ageFather++;-->
+<!--             ageChild++;-->
+<!--             count++;-->
+<!--         }-->
+<!--        alert(count + ' Là số năm cần để tuổi bố gấp đôi tuổi con.');-->
+
+<!--    }else {-->
+<!--        alert('Số tuổi của bố phải lớn hơn con ít nhất 25 tuổi!');-->
+<!--    }-->
+<!--    -->
+<!--</script>-->
+
+<!--Bài 4-->
+
+<!--<script>-->
+<!--    // kiểm tra có phải là số nguyên tố hay không là phần trên này-->
+<!--    function isPrime(number) {-->
+<!--        if (number <= 1) {-->
+<!--            return false;-->
+<!--        }-->
+<!--        for (let i = 2; i <= Math.sqrt(number);i++) {-->
+<!--            if (number % i === 0) {-->
+<!--                return false;-->
+<!--            }-->
+<!--        }-->
+<!--        return true;-->
+<!--    }-->
+<!--//sau khi kiểm tra xong thì dùng while để output ra có phải là số nguyên tố hay không-->
+<!--    function checkPrime() {-->
+<!--        let userInput = parseInt(prompt("Nhập một số:"));-->
+
+<!--        while (!isPrime(userInput)) {-->
+<!--            userInput = parseInt(prompt("Số không phải là số nguyên tố. Vui lòng nhập lại:"));-->
+<!--        }-->
+
+<!--        alert((userInput + " là số nguyên tố."));-->
+<!--    }-->
+
+<!--    checkPrime();-->
+
+<!--</script>-->
+
+<!--Bài 5-->
+
+<!--<script>-->
+<!--    let n = prompt('Nhập số hàng:');-->
+<!--    let sao = '';-->
+<!--    for (j = 1; j <= n; j++){-->
+<!--        for (i = 1; i <= 5; i++) {-->
+<!--            sao = '*';-->
+<!--            document.write(sao);-->
+<!--        }-->
+<!--    document.write('<br>');-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 6 -->
+
+<!--<script>-->
+<!--    function check(month, year) {-->
+<!--        while ( 0 < month <= 12) {-->
+<!--            switch (month) {-->
+<!--                case 2:-->
+<!--                    if (year % 4 === 0 && year % 100 !== 0 || year % 400 ===0) {-->
+<!--                        alert('Tháng ' + month + ' năm' + year + ' có 29 ngày.');-->
+<!--                    }else{-->
+<!--                        alert('Tháng ' + month + ' năm' + year + ' có 28 ngày.');-->
+<!--                    }-->
+<!--                    break;-->
+<!--                case 1:-->
+<!--                case 3:-->
+<!--                case 5:-->
+<!--                case 7:-->
+<!--                case 8:-->
+<!--                case 10:-->
+<!--                case 12:-->
+<!--                    alert('Tháng ' + month + ' năm' + year + ' có 31 ngày.');-->
+<!--                    break;-->
+<!--                case 4:-->
+<!--                case 6:-->
+<!--                case 9:-->
+<!--                case 11:-->
+<!--                    alert('Tháng ' + month + ' năm' + year + ' có 30 ngày.');-->
+<!--                    break;-->
+<!--            }-->
+<!--        break;-->
+<!--        }-->
+<!--    }-->
+<!--    let month = parseInt(prompt('Nhập tháng cần kiểm tra:'));-->
+<!--    let year = parseInt(prompt('Nhập năm cần kiểm tra:'));-->
+<!--    check(month,year);-->
+
+<!--</script>-->
+<!--Bài 7-->
+
+<!--<script>-->
+<!--    let num = +prompt('Nhập số n:');-->
+<!--    let sum = 0;-->
+<!--    for (i = 1; i <= num; i++) {-->
+<!--        sum += 1/i;-->
+<!--    }-->
+<!--    document.write(sum);-->
+<!--</script>-->
+
+<!--Bài 8-->
+
+<script>
+    function calculateS(n) {
+        let S = 15;
+       let sign = -1;
+        let factorial = 1;
+
+       for (let i = 1; i <= n; i++) {
+            factorial *= i;
+            S += sign * (1 / factorial);
+            sign *= -1;
+        }
+        return S;
+    }
+    console.log(calculateS(4));
+</script>
+
+<!--Bài 9-->
+
+<!--<script>-->
+<!--    let n = +prompt('Nhập số n:');-->
+<!--    let sum = 0;-->
+<!--    for (i = 1; i <= n; i++) {-->
+<!--        let tinhGiaiThua = 2 * i - 1;-->
+<!--        let giaiThua = 1;-->
+<!--        for ( j = 2; j <= tinhGiaiThua; j++){-->
+<!--            giaiThua *= j;-->
+<!--        }-->
+<!--        sum += 1/giaiThua;-->
+<!--    }-->
+<!--    console.log(sum);-->
+<!--</script>-->
+
+<!--Bài 10-->
+
+<!--<script>-->
+<!--    let n = +prompt('Nhập số n:');-->
+<!--    let sum = 0;-->
+<!--    if (n % 2 === 1 ) {-->
+<!--        function le(n) {-->
+<!--            for (i = 1; i <= n; i++) {-->
+<!--                if (i % 2 === 0) {-->
+<!--                    continue;-->
+<!--                }-->
+<!--                sum = sum + i;-->
+<!--            }-->
+<!--            document.write('Tổng lẻ : ' + sum);-->
+<!--        }-->
+<!--        le(n);-->
+<!--    }else {-->
+<!--        function chan(n) {-->
+<!--            for (i = 1; i <= n; i++) {-->
+<!--                if (i % 2 === 1) {-->
+<!--                    continue;-->
+<!--                }-->
+<!--                sum = sum + i;-->
+<!--            }-->
+<!--            document.write('Tổng chẵn: ' + sum);-->
+<!--        }-->
+<!--        chan(n);-->
+<!--    }-->
+
+<!--</script>-->
+
+<!--Bài 11-->
+
+<!--<script>-->
+<!--    let m = parseInt(prompt('Nhập số m:'));-->
+<!--    let tong = 0;-->
+<!--    let tich = 1;-->
+<!--    function check(m) {-->
+<!--        let result = m.toString();-->
+<!--        for (i = 0; i < result.length; i++) {-->
+<!--            let result2 = parseInt(result[i]);-->
+<!--            tong += result2;-->
+<!--            tich *= result2;-->
+<!--        }-->
+<!--    }-->
+<!--    check(m);-->
+<!--    document.write('Tổng của m là: ' + tong + '<br>');-->
+<!--    document.write('Tích của m là: ' + tich + '<br>');-->
+
+<!--Bài 12-->
+
+<!--<script>-->
+
+<!--    let a = parseInt(prompt('Nhập số a:'));-->
+<!--    let b = parseInt(prompt('Nhập số b:'));-->
+<!--    let gcm = null;-->
+<!--    let lcm = null;-->
+<!--    function check (a,b) {-->
+<!--        while (b !== 0) {-->
+<!--            let r = a % b;-->
+<!--            a = b;-->
+<!--            b = r;-->
+<!--        }-->
+<!--        gcm = a;-->
+<!--        document.write('Ước chung lớn nhất của a và b là: ' + gcm);-->
+<!--    }-->
+<!--    check(a,b);-->
+<!--    lcm = (a * b) / gcm;-->
+<!--    document.write('Ước chung lớn nhất của a và b là: ' + lcm);-->
+
+<!--</script>-->
+
+</body>
+</html>
