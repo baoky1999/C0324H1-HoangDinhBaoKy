@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 2</title>
+</head>
+<body>
+<!--Bài 1-->
+
+<!--<script>-->
+<!--    let arr = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];-->
+<!--    for (let i in arr) {-->
+<!--       console.log('row' + i);-->
+<!--       for (let j in arr[i]) {-->
+<!--           console.log(' ' + arr[i][j]);-->
+<!--       }-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 2-->
+
+<!--<script>-->
+<!--    let arr = ['5','3','T','A','7','4','H'];-->
+<!--    arr.reverse();-->
+<!--    let arr2 = arr.join("");-->
+<!--    console.log(arr2);-->
+<!--</script>-->
+
+<!--Bài 3-->
+
+<!--<script>-->
+<!--    let arr = [5,3,'T','A',7,4,'H'];-->
+<!--    let arrlength = arr.length;-->
+<!--    function demSo(arr) {-->
+<!--        let demSoKyTu = 0;-->
+<!--        for (let i = 0; i < arrlength; i++) {-->
+<!--            if (!isNaN(parseInt(arr[i]))) {-->
+<!--                demSoKyTu += 1;-->
+<!--            }-->
+<!--        }-->
+<!--    return demSoKyTu;-->
+<!--    }-->
+<!--    let soKyTu = demSo(arr);-->
+<!--    console.log(soKyTu);-->
+<!--</script>-->
+
+<!--Bài 4-->
+
+<!--<script>-->
+<!--    let chuoi = "Em là siêu nhân gao đen";-->
+<!--    let soTu = demSoTu(chuoi);-->
+<!--    console.log("Số từ trong chuỗi là:", soTu);-->
+<!--    function demSoTu(chuoi) {-->
+<!--        let arr = chuoi.split(" ");-->
+<!--        return arr.length;-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 5-->
+
+<!--<script>-->
+<!--    let arr1 = prompt('Nhập chuỗi thứ nhất:');-->
+<!--    let arr2 = prompt('Nhập chuỗi thứ hai:');-->
+<!--    if (check(arr1,arr2)) {-->
+<!--        console.log('2 chuỗi giống nhau')-->
+<!--        console.log (arr1);-->
+<!--        console.log (arr2);-->
+<!--    }else {-->
+<!--        console.log('2 chuỗi KHÔNG giống nhau')-->
+<!--    }-->
+<!--    function check(arr1,arr2) {-->
+<!--        if (arr1 === arr2) {-->
+<!--            return true;-->
+<!--        }else {-->
+<!--            return false;-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 6-->
+
+<script>
+    let mangKyTu = ['a', 'b', '-', 'c', '-', 'd','-'];
+    console.log("Mảng trước khi thay thế:", mangKyTu);
+    mangKyTu = thayTheKyTu(mangKyTu);
+    console.log("Mảng sau khi thay thế:", mangKyTu);
+    function thayTheKyTu(arr) {
+        let length = arr.length;
+        for (let i = 0; i < length; i++) {
+            if (arr[i] === '-') {
+                arr[i] = '_';
+            }
+        }
+        return arr;
+    }
+</script>
+
+</body>
+</html>
