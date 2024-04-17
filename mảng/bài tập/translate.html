@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Translate</title>
+</head>
+<body>
+<h3>Nhập từ cần dịch: <input type="text" id="input"/>
+    <button type="button" onclick="check()">Check</button></h3>
+<h2 id="result"></h2>
+
+<script>
+    function check() {
+        let arr_eng = ["hello", "apple", "blue", "red"];
+        let arr_vie = ["xin chào", "táo", "xanh", "đỏ"];
+        let string = document.getElementById('input').value;
+        let agea = '';
+        let check = false;
+        for (let i = 0; i < arr_eng.length; i++) {
+            if (string === arr_eng[i]) {
+                agea = arr_vie[i];
+                check = true;
+                break;
+            }
+        }
+        for (let j = 0; j < arr_vie.length; j++) {
+            if (string === arr_vie[j]) {
+                agea = arr_eng[j];
+                check = true;
+                break;
+            }
+        }
+
+        if (check) {
+            document.getElementById('result').innerHTML = agea;
+
+        } else {
+            document.getElementById('result').innerHTML = "Không có trong từ điển!!";
+
+        }
+
+    }
+</script>
+</body>
+</html>
