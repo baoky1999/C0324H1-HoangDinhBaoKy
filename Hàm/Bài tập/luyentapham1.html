@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập hàm 1</title>
+</head>
+<body>
+<!--Bài 1-->
+<!--<button type="button" onclick="alertMessage()">Hiển thị thông báo</button>-->
+<!--<script>-->
+<!--    function alertMessage() {-->
+<!--        alert('Xin chào');-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 2-->
+
+<!--<button type="button" onclick="topSerVer()">Hiển thị</button>-->
+<!--<script>-->
+<!--    function topSerVer(number) {-->
+<!--        function name(number) {-->
+<!--            return number + 1;-->
+<!--        }-->
+<!--        number = +prompt('Nhập đối số:');-->
+<!--        alert(name(number));-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 3-->
+<!--<script>-->
+<!--    function check(parameter1, parameter2) {-->
+<!--        if (parameter1 > parameter2) {-->
+<!--            alert('Tham số thứ nhất lớn hơn tham số thứ 2');-->
+<!--            return;-->
+<!--        }-->
+<!--        if (parameter1 < parameter2) {-->
+<!--            alert(parameter1 + parameter2);-->
+<!--            return;-->
+<!--        }-->
+<!--    }-->
+<!--    let parameter1 = +prompt('Nhập số thứ nhất');-->
+<!--    let parameter2 = +prompt('Nhập số thứ hai');-->
+<!--    check(parameter1, parameter2);-->
+<!--</script>-->
+
+<!--Bài 4-->
+
+<!--<script>-->
+<!--    function addNumbers() {-->
+<!--        firstNum = 4;-->
+<!--        secondNum = 8;-->
+<!--        result = firstNum + secondNum;-->
+<!--        return result;-->
+<!--    }-->
+<!--    result = 0;-->
+<!--    alert("Trước lời gọi hàm: " + result);-->
+<!--    result = addNumbers()-->
+<!--    alert("Sau lời gọi hàm: " + result);-->
+<!--</script>-->
+
+<!--Bài 5-->
+
+<script>
+    let arr = ['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+    let arr1 = ['Ursa Minor','Tarurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
+    let length = arr.length;
+    let name = prompt('Nhập tên ngôi sao cần kiểm tra');
+    let arr2 = [];
+    if (check(arr,arr1)) {
+        alert('Chòm sao tương ứng: ' + arr2);
+    }else {
+        alert('KHÔNG có chòm sao thích hợp!!!');
+    }
+    function check (arr,arr1) {
+        for (let i = 0;i < length; i++) {
+            if (name === arr[i]) {
+                arr2 = arr1[i];
+                return true;
+            }
+        }
+    return false;
+    }
+    check(arr,arr1);
+
+</script>
+</body>
+</html>
