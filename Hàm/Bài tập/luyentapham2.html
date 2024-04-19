@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập hàm 2</title>
+</head>
+<body>
+<!-- Bài 1-->
+
+<!--<script>-->
+<!--    let num = +prompt('Nhập số cần tính toán:');-->
+<!--    function check(num) {-->
+<!--        return num * num;-->
+<!--    }-->
+<!--    check(num);-->
+<!--    alert(check(num));-->
+<!--</script>-->
+
+<!--Bài 2-->
+
+<!--<script>-->
+<!--    let banKinh = +prompt('Nhập vào bán kính của hình tròn:');-->
+<!--    const pi = Math.PI;-->
+<!--    function chuVi() {-->
+<!--        return 2 * pi * banKinh;-->
+<!--    }-->
+<!--    function dienTich() {-->
+<!--        return pi * (banKinh * banKinh);-->
+<!--    }-->
+<!--    alert(chuVi());-->
+<!--    alert(dienTich());-->
+<!--</script>-->
+
+<!--Bài 3-->
+
+<!--<script>-->
+<!--    let a = parseInt(prompt('Nhập số nguyên bất kỳ'));-->
+<!--    let a1 = 1;-->
+<!--    let check = factorial(a);-->
+<!--    if (check) {-->
+<!--        alert(`Giai thừa của ${a} là : ${a1} `);-->
+<!--    } else {-->
+<!--        alert(`${a} không có giai thừa!`);-->
+<!--    }-->
+<!--    function factorial(a) {-->
+<!--        if (a < 2) {-->
+<!--            return false;-->
+<!--        }-->
+<!--        for (let i = a; i >= 1; i&#45;&#45;) {-->
+<!--            a1 = a1 * i;-->
+<!--        }-->
+<!--        return true;-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 4-->
+
+<!--<script>-->
+<!--    let number = prompt('Nhập số cần kiểm tra vào đây:');-->
+<!--    let num = "";-->
+<!--    let num1 = null;-->
+<!--    if (check(number)) {-->
+<!--        alert(true);-->
+<!--    }else {-->
+<!--        alert(false);-->
+<!--    }-->
+<!--    function check(number) {-->
+<!--        if (number === num) {-->
+<!--            return false;-->
+<!--        }-->
+<!--        if (number === num1) {-->
+<!--            return false;-->
+<!--        }-->
+<!--        if (!isNaN(number)) {-->
+<!--            return true;-->
+<!--        }-->
+<!--    return false;-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 5-->
+
+<!--<script>-->
+<!--    let num1 = parseInt(prompt('Nhập số nguyên vào đây:'));-->
+<!--    let num2 = parseInt(prompt('Nhập số nguyên vào đây:'));-->
+<!--    let num3 = parseInt(prompt('Nhập số nguyên vào đây:'));-->
+<!--    let min = num1;-->
+<!--    function check(min) {-->
+<!--        if ( min > num2) {-->
+<!--            min = num2;-->
+<!--        }-->
+<!--        if ( min > num3) {-->
+<!--            min = num3;-->
+<!--        }-->
+<!--    return min;-->
+<!--    }-->
+<!--    check(min);-->
+<!--    alert((check(min)) + ' Là số nguyên bé nhất');-->
+<!--</script>-->
+
+<!--Bài 6-->
+
+<!--<script>-->
+<!--    let num = parseInt(prompt('Nhập số cần kiểm tra:'));-->
+<!--    function check(num) {-->
+<!--        if (num === 0) {-->
+<!--            alert('Giá trị nhập vào là 0');-->
+<!--            return;-->
+<!--        }-->
+<!--        if (num < 0) {-->
+<!--            alert(num + ' Là số nguyên âm');-->
+<!--        }else {-->
+<!--            alert(num + ' Là số nguyên dương');-->
+<!--        }-->
+<!--    }-->
+<!--    check(num);-->
+<!--</script>-->
+
+<!--Bài 7-->
+<!--<script>-->
+<!--    let num1 = parseInt(prompt('Nhập vào số thứ nhất'));-->
+<!--    let num2 = parseInt(prompt('Nhập vào số thứ hai'));-->
+<!--    let num3 = 0;-->
+<!--    function doiCho() {-->
+<!--        num3 = num1;-->
+<!--        num1 = num2;-->
+<!--        num2 = num3;-->
+<!--        return [num1,num2];-->
+<!--    }-->
+<!--    console.log(doiCho());-->
+<!--</script>-->
+
+<!--Bài 8-->
+
+<!--<script>-->
+<!--    function daoNguoc(arr) {-->
+<!--        arr.reverse();-->
+<!--    return arr;-->
+<!--    }-->
+<!--    let arr = ['a','f','r',1,8,6,4,'r','t','f'];-->
+<!--    console.log(daoNguoc(arr));-->
+
+<!--</script>-->
+
+<!--Bài 9-->
+
+<script>
+    let arr = ['B','A','O',1,'K','Y',2,'B'];
+    let num = prompt('Nhập lý tự muốn kiểm tra:');
+    let cout = 0;
+    let check1 = check();
+    if (check1) {
+        alert(`${num} xuất hiện ${cout} trong mảng!`)
+    }else {
+        alert('-1');
+    }
+    function check() {
+        let length = arr.length;
+        for (let i = 0; i < length; i++) {
+            if (num == arr[i]) {
+                cout += 1;
+            }
+        }
+    return true;
+    }
+
+</script>
+</body>
+</html>
