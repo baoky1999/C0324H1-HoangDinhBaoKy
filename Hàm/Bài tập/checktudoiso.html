@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối số</title>
+</head>
+<body>
+<script>
+    let s = prompt('Nhập từ cần kiểm tra');
+    function isPalindrome(s) {
+        s = s.toLowerCase();
+        if (s.length <= 1) {
+            return true;
+        }
+        if (s[0] !== s[s.length - 1]) {
+            return false;
+        }
+        return isPalindrome(s.slice(1, -1));
+    }
+    console.log(isPalindrome(s));
+</script>
+
+</body>
+</html>
