@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="250" style="border: 5px solid red;"></canvas>
+<h3 id="agea"></h3>
+<h3 id="perimeter"></h3>
+<script>
+    let chuNhat = document.getElementById('myCanvas');
+    let ctx = chuNhat.getContext('2d');
+    ctx.fillStyle = 'red';
+    ctx.fillRect(0,0,500,250);
+
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getWidth() {
+            return this.width;
+        }
+        getHeight() {
+            return this.height;
+        }
+        setWidth(width) {
+            this.width = width;
+        }
+        setHeight(height) {
+            this.height = height;
+        }
+        getAgea() {
+            return this.width * this.height;
+        }
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+    }
+
+    let myRectangle = new Rectangle(500, 250);
+    myRectangle.setWidth(400);
+    myRectangle.setHeight(200);
+    let width = myRectangle.getWidth();
+    let height = myRectangle.getHeight();
+
+    document.getElementById('agea').innerHTML = 'Diện tích của hình chữ nhật là: ' + myRectangle.getAgea();
+    document.getElementById('perimeter').innerHTML = 'Chu vi của hình chữ nhật là: ' + myRectangle.getPerimeter();
+
+</script>
+</body>
+</html>
