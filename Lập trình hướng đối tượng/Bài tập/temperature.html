@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<h1>Bảng chuyển đổi nhiệt độ</h1>
+<h3 id="f"></h3>
+<h3 id="kenvin"></h3>
+
+<script>
+    class Temperature {
+        constructor (doC) {
+            this.doC = doC;
+        }
+        fahrenheit () {
+            return 9/5 * this.doC + 32;
+        }
+        kenvin () {
+            return this.doC + 273.15;
+        }
+    }
+    let myTemperature = new Temperature(25);
+    let myFahrenheit =  myTemperature.fahrenheit();
+    let myKenvin = myTemperature.kenvin();
+    document.getElementById('f').innerHTML = 'Độ F : ' + myFahrenheit;
+    document.getElementById('kenvin').innerHTML = 'Độ K : ' + myKenvin;
+</script>
+</body>
+</html>
