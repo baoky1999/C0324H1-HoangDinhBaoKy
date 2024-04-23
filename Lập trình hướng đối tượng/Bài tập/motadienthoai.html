@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mobie.css"/>
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<h1>Nokia</h1>
+<h4 id="result"></h4>
+<h4 id="xemMessage"></h4>
+<h4 id="xemMessageDaGui"></h4>
+<table>
+    <tr>
+        <th>
+            <button onclick="myMobile.checkPowerStatus()">Kiểm tra trạng thái</button>
+        </th>
+        <th>
+            <button onclick="myMobile.turnOn()">Bật máy</button>
+        </th>
+        <th>
+            <button onclick="myMobile.turnOff()">Tắt máy</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="myMobile.chargeBattery()">Sạc pin</button>
+        </th>
+        <th>
+            <button onclick="myMobile.receiveMessage()">Nhận tin nhắn</button>
+        </th>
+        <th>
+            <button onclick="myMobile.composeMessage()">Soạn tin nhắn</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="myMobile.sendMessage()">Gửi tin nhắn</button>
+        </th>
+        <th>
+            <button onclick="myMobile.checkInbox()">Xem tin nhắn đến</button>
+        </th>
+        <th>
+            <button onclick="myMobile.checkSentMessages()">Xem tin đã gửi</button>
+        </th>
+    </tr>
+</table>
+<h1>IPhone</h1>
+<h4 id="context"></h4>
+<h4 id="contextXem"></h4>
+
+<table>
+    <tr>
+        <th>
+            <button onclick="myMobile1.checkPowerStatus()">Kiểm tra trạng thái</button>
+        </th>
+        <th>
+            <button onclick="myMobile1.turnOn()">Bật máy</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="myMobile1.chargeBattery()">Sạc pin</button>
+        </th>
+        <th>
+            <button onclick="myMobile1.receiveMessage()">Nhận tin nhắn</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="myMobile1.sendMessage()">Gửi tin nhắn</button>
+        </th>
+        <th>
+            <button onclick="myMobile.sendMessage(myMobile1)">Xem tin nhắn đến</button>
+        </th>
+    </tr>
+</table>
+<script>
+    class Mobile {
+        constructor(name) {
+            this.name = name;
+            this.battery = 60;
+            this.draftMessage = ''; // vùng nhớ soạn thảo
+            this.inbox = [];  // vùng nhớ thư đến
+            this.sentMessages = [];   // vùng nhớ cho tin nhắn gửi
+        }
+
+        checkPowerStatus() {
+            if (this.battery > 0) {
+                alert('Máy con pin');
+            } else {
+                alert('Máy hết pin');
+            }
+        }
+
+        turnOn() {
+            document.getElementById('result').innerHTML = 'Điện thoại đã bật';
+        }
+
+        turnOff() {
+            document.getElementById('result').innerHTML = 'Điện thoại đã tắt';
+        }
+
+        chargeBattery() {
+            if (this.battery <= 100) {
+                alert('Điện thoại đang được sạc: ' + this.battery++);
+            }
+
+        }
+
+        composeMessage() {
+            this.draftMessage = prompt('Soạn tin nhắn');
+            this.battery--;
+        }
+
+        receiveMessage() {
+
+            alert('Nhận tin nhắn');
+            this.battery--;
+        }
+
+        sendMessage(receiver) {
+            receiver.receiveMessage(this.draftMessage);
+            alert('Tin nhắn đã được gửi đi');
+            this.battery--;
+        }
+
+        checkInbox() {
+            alert('Xem tin nhắn đến');
+            this.battery--;
+        }
+
+        checkSentMessages() {
+            alert('Xem tin nhắn đã gửi');
+            this.battery--;
+        }
+
+    }
+
+    class Mobile1 {
+        constructor(name) {
+            this.name = name;
+            this.battery = 70;
+        }
+
+        checkPowerStatus() {
+            if (this.battery > 0) {
+                alert('Máy con pin');
+            } else {
+                alert('Máy hết pin');
+            }
+        }
+
+        turnOn() {
+            document.getElementById('context').innerHTML = 'Điện thoại đã bật';
+        }
+
+        chargeBattery() {
+            if (this.battery <= 100) {
+                alert('Điện thoại đang được sạc: ' + this.battery++);
+            }
+
+        }
+
+        receiveMessage(draftMessage) {
+            this.checkInbox(draftMessage);
+            alert('Nhận tin nhắn');
+            this.battery--;
+        }
+
+        sendMessage() {
+            alert('Tin nhắn đã được gửi đi');
+            this.battery--;
+        }
+
+        checkInbox(draftMessage) {
+            document.getElementById('contextXem').innerHTML = 'Tin nhắn đến từ Nokia là : ' + draftMessage;
+            this.battery--;
+        }
+    }
+    let myMobile = new Mobile('3310');
+    let myMobile1 = new Mobile1('14 Pro');
+</script>
+</body>
+</html>

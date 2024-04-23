@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+<script>
+    // Định nghĩa class Nokia
+    class Nokia {
+        constructor(model) {
+            this.model = model;
+            this.message = ""; // Biến để lưu trữ tin nhắn
+        }
+
+        // Phương thức để nhập tin nhắn từ người dùng và lưu vào biến message
+        promptMessage() {
+            this.message = prompt(``);
+        }
+
+        // Phương thức để gửi tin nhắn đã lưu tới một đối tượng nhận
+        sendMessage(receiver) {
+            receiver.receiveMessage(this.message);
+        }
+    }
+
+    // Định nghĩa class iPhone
+    class iPhone {
+        constructor(model) {
+            this.model = model;
+        }
+
+        receiveMessage(message) {
+            this.displayMessage(message);
+        }
+
+        displayMessage(message) {
+            document.write(`${message}`);
+        }
+    }
+
+    // Sử dụng các class đã định nghĩa
+    const nokiaPhone = new Nokia("3310");
+    const iPhonePhone = new iPhone("12 Pro");
+
+    // Nhập tin nhắn từ người dùng và lưu vào biến message của Nokia
+    nokiaPhone.promptMessage();
+
+    // Gửi tin nhắn từ Nokia đến iPhone
+    nokiaPhone.sendMessage(iPhonePhone);
+
+</script>
+</body>
+</html>
