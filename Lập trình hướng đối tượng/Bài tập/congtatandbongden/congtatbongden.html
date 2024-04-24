@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bongdenvscongtat.css"/>
+    <title>Công tắt và bóng đèn</title>
+</head>
+<body>
+<button onclick="congTac.connectToLamp()">Kiểm tra kết nối</button>
+<button onclick="congTac.switchOn()">Switch ON</button>
+<button onclick="congTac.switchOff()">Switch OFF</button>
+<button onclick="bongDen.turnOn()">Turn On</button>
+<button onclick="bongDen.turnOff()">Turn OFF</button>
+<script>
+    class ElectricLamp {
+        constructor () {
+            this.status = false;
+        }
+        getStatus () {
+            return this.status;
+        }
+        turnOn() {
+            this.status = true;
+            alert('Đèn đã được bật');
+        }
+        turnOff() {
+            this.status = false;
+            alert('Đèn đã được tắt');
+        }
+    }
+    class SwitchButton {
+        constructor () {
+            this.status = false;
+            this.lamp = null;
+        }
+        connectToLamp(ElectricLamp) {
+            if (this.status === true) {
+                alert('connected')
+            }else {
+                alert('No connected')
+            }
+        }
+        switchOn() {
+            this.status = true;
+            alert('Switch on')
+        }
+        switchOff() {
+            this.status = false;
+            alert('Switch off');
+        }
+
+    }
+    let bongDen = new ElectricLamp();
+    let congTac = new SwitchButton();
+
+</script>
+</body>
+</html>
