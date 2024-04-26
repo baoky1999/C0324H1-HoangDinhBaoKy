@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điều khiển Tivi bằng Remote</title>
+</head>
+<body>
+
+<script>
+    class Tivi {
+        constructor (channel, volume, status) {
+            this.channel = channel;
+            this.volume = 15;
+            this.status = status;
+        }
+        getStatus () {
+            if (this.status) {
+                alert('Tivi đang bật');
+            }
+        }
+        setChannel (newChannel) {
+            this.channel = newChannel;
+            document.write('Kênh đã chuyển đến là kênh: ' + this.channel + '<br>');
+        }
+        getVolume () {
+            tivi.setVolume();
+            return this.volume;
+        }
+        setVolume (newVolume) {
+            this.volume = this.volume + 1;
+            document.write('Âm lượng của Tivi: ' + tivi.volume + '<br>');
+        }
+        turnOn (tivi) {
+            document.write('Tivi đã được bật' + '<br>');
+            return this.status = true;
+        }
+    }
+    class Remote {
+        constructor (code) {
+            this.code = code;
+        }
+        controlVolume () {
+            tivi.setVolume();
+        }
+        select (newChannel) {
+           document.write('Đã dùng Remote chuyển kệnh Tivi đến kênh: ' + newChannel + '<br>');
+        }
+        turnOff () {
+            return tivi.status = false;
+        }
+    }
+let tivi = new Tivi(name, 5, );
+let remote = new Remote();
+tivi.turnOn();
+
+tivi.setChannel(7);
+remote.select(3);
+tivi.setVolume();
+tivi.setVolume();
+remote.controlVolume();
+remote.turnOff();
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
