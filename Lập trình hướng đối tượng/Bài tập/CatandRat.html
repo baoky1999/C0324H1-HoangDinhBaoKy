@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mèo bắt chuột</title>
+</head>
+<body>
+<script>
+    class Mouse {
+        constructor (name, weight, speed, life ) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.life = life;
+        }
+        say() {
+            document.write('chít chít');
+        }
+        getSpeed() {
+            return this.speed;
+        }
+        setSpeed(newSpeed) {
+            this.speed = newSpeed;
+        }
+        getLife() {
+            return this.life;
+        }
+        setLife(newLife) {
+            this.life = newLife;
+        }
+        getWeight () {
+            return this.weight;
+        }
+        setWeight(newWeight) {
+            this.weight = newWeight;
+        }
+    }
+    class Cat {
+        constructor (name, weight,speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+        say() {
+            document.write('Mèo mèo');
+        }
+        getWeight() {
+            return this.weight;
+        }
+        setWeight(newWeight) {
+            this.weight = newWeight;
+        }
+        getSpeed() {
+            return this.speed;
+        }
+        setSpeed(newSpeed) {
+            this.speed = newSpeed;
+        }
+        catchMouse(mouse) {
+            if ( this.getSpeed() > mouse.getSpeed() ) {
+                return true;
+            }else {
+                alert('Chuột đã chạy thoát');
+            }
+        }
+        eatMouse(mouse) {
+            if (mouse.getLife() === true && this.catchMouse(mouse) === true) {
+                this.weight += mouse.weight;
+                console.log("Mèo đã ăn được chuột và cân nặng mới là: " + this.weight);
+            }else {
+                alert ('Chuột đã chết')
+            }
+        }
+
+    }
+    let mouse = new Mouse();
+    let cat = new Cat();
+    mouse.say();
+    mouse.setWeight(10);
+    mouse.setSpeed(10);
+    mouse.setLife(true);
+    cat.setSpeed(15);
+    cat.setWeight(15);
+    cat.eatMouse(mouse);
+
+
+</script>
+</body>
+</html>
